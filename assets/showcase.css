@@ -1,0 +1,123 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #F8F8F8 url(pattern.jpg);
+  border-top: 4px solid #518D8A;
+  font-family: Verdana,"Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #555;
+  text-align: left;
+}
+
+.clearfix {
+  clear: both;
+}
+
+.container { min-width: 940px; }
+
+
+.section-form {
+  width: 80%;
+  margin-top: 80px;
+  margin: 80px auto 30px auto;
+  padding: 20px 50px;
+  background: #2d2d2d;
+  color: #ffffff;
+  font-size: 1.2em;
+}
+
+.section-form .col {
+  float: left;
+}
+
+.section-form .col.intro {
+  width: 60%;
+}
+
+.section-form .col.intro img {
+  width: 30%;
+}
+
+.section-form .col.intro .inner {
+  padding: 0 10px;
+}
+
+.section-form .col.form {
+  width: 40%;
+}
+
+.form .inner {
+  background: #333333;
+  padding: 20px;
+}
+
+.form label {
+  display: block;
+  margin-bottom: 20px;
+}
+
+.form label .name {
+  display: inline-block; /* FIXME: IE6 */
+  width: 90px;
+  padding-right: 5px;
+  padding-top: 7px;
+  vertical-align: top;
+}
+
+.form input[type=text], .form textarea {
+  padding: 8px 15px;
+  border: none;
+  background: #222222;
+  color: #aaaaaa;
+  width: 200px;
+}
+
+.form .required {
+  color: #AC4A4A;
+}
+
+.form-actions {
+  padding-left: 100px;
+}
+
+.form-action input[type=submit] {
+  height: 2em;
+  font-size: 2em;
+  line-height: 2em;
+}
+
+.section-detail {
+  width: 80%;
+  margin: 0 auto;
+  font-size: 1.1em;
+}
+
+.section-detail h1 span {
+  border-bottom: 1px dotted #aaaaaa;
+  padding-bottom: 5px;
+}
+
+.schools ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.schools ul li {
+  float: left;
+  width: 25%;
+}
+
+.schools ul li a {
+  display: block;
+  background: #ECECEC;
+  padding: 3px 10px;
+  margin: 2px 3px;
+  text-decoration: none;
+  color #555555;
+}
+.schools ul li a:link { color: #555555; }  
+.schools ul li a:visited {color: #555555; }
+.schools ul li a:hover { color: #555555; background: #e2e2e2; }
+.schools ul li a:active { color: #555555; }
