@@ -1,7 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  background: #F8F8F8 url(pattern.jpg);
+  background: #000000;
   border-top: 4px solid #518D8A;
   font-family: Verdana,"Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 16px;
@@ -20,31 +20,33 @@ body {
 .section-form {
   width: 80%;
   margin-top: 80px;
-  margin: 80px auto 30px auto;
+  margin: 80px auto 0 auto;
   padding: 20px 50px;
   background: #2d2d2d;
   color: #ffffff;
   font-size: 1.2em;
 }
 
-.section-form .col {
-  float: left;
+.intro {
+  margin-right: 500px;
 }
 
-.section-form .col.intro {
-  width: 60%;
-}
-
-.section-form .col.intro img {
+.intro img {
   width: 30%;
+  min-width: 150px;
 }
 
-.section-form .col.intro .inner {
+.intro .inner {
   padding: 0 10px;
 }
 
-.section-form .col.form {
-  width: 40%;
+.form {
+  width: 450px;
+  float: right;
+}
+
+.form h1 {
+  margin-top: 0;
 }
 
 .form .inner {
@@ -63,6 +65,7 @@ body {
   padding-right: 5px;
   padding-top: 7px;
   vertical-align: top;
+  text-align: right;
 }
 
 .form input[type=text], .form textarea {
@@ -70,7 +73,7 @@ body {
   border: none;
   background: #222222;
   color: #aaaaaa;
-  width: 200px;
+  width: 250px;
 }
 
 .form .required {
@@ -81,16 +84,29 @@ body {
   padding-left: 100px;
 }
 
-.form-action input[type=submit] {
-  height: 2em;
-  font-size: 2em;
-  line-height: 2em;
+#btn-submit {
+  padding: 5px 20px;
+  font-size: 1.2em;
+  line-height: 1.2em;
+  background: #F8E901;
+  text-decoration: none;
+  color: #222;
+}
+
+#btn-submit:hover {
+  background: #222;
+  color: #FFF;
 }
 
 .section-detail {
+  font-size: 1.1em;
+  background: #F8F8F8 url(pattern.jpg);
+}
+
+.section-detail > .inner {
   width: 80%;
   margin: 0 auto;
-  font-size: 1.1em;
+  padding-top: 30px;
 }
 
 .section-detail h1 span {
