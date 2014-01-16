@@ -10,6 +10,8 @@ body {
   text-align: left;
 }
 
+h1 { font-size: 1.5em; }
+
 a:link, a:visited {
     color: #08C;
     text-decoration: none;
@@ -71,7 +73,7 @@ a:hover, a:active {
 
 .form label .name {
   display: inline-block; /* FIXME: IE6 */
-  width: 90px;
+  width: 100px;
   padding-right: 5px;
   padding-top: 7px;
   vertical-align: top;
@@ -165,3 +167,29 @@ a:hover, a:active {
 .footer a, footer span {
     margin: 0 10px;
 }
+
+/* 大屏幕 */
+@media (min-width: 1200px) {  }
+ 
+/* 平板电脑和小屏电脑之间的分辨率 */
+@media (max-width: 768px) {
+    .container { min-width: 0; }
+    .section-form { padding: 5px 10px; margin-top: 20px; }
+    .intro { margin-right: 0; }
+    .form { float: none; width: auto; }
+    .form label { margin-bottom: 5px; }
+    .form label .name { text-align: left; display: block; margin-bottom: 3px; }
+    .form .input { display: block; width: 100%; min-height: 30px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+    .form-actions { padding-left: 0; text-align: center; margin-top: 10px; }
+    #btn-submit { display: block; }
+    .schools ul li { width: 49.8%; }
+    .footer span { display: block; }
+}
+ 
+/* 横向放置的手机和竖向放置的平板之间的分辨率 */
+@media (max-width: 767px) { 
+    .schools ul li { float: none; display: block; width: auto; }
+}
+ 
+/* 横向放置的手机及分辨率更小的设备 */
+@media (max-width: 480px) {}
