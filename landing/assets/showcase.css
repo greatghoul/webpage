@@ -136,7 +136,7 @@ a:hover, a:active {
 
 .schools ul li {
   float: left;
-  width: 25%;
+  width: 24.9%;
   height: 30px;
   line-height: 30px;
   overflow: hidden;
@@ -152,7 +152,7 @@ a:hover, a:active {
 }
 .schools ul li a:link { color: #555555; }  
 .schools ul li a:visited {color: #555555; }
-.schools ul li a:hover { color: #555555; background: #e2e2e2; }
+.schools ul li a:hover { color: #555555; background: #e2e2e2; text-decoration: none; }
 .schools ul li a:active { color: #555555; }
 
 .footer {
