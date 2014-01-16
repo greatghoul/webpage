@@ -10,6 +10,16 @@ body {
   text-align: left;
 }
 
+a:link, a:visited {
+    color: #08C;
+    text-decoration: none;
+}
+
+a:hover, a:active {
+    color: #005580;
+    text-decoration: underline;
+}
+
 .clearfix {
   clear: both;
 }
@@ -68,7 +78,7 @@ body {
   text-align: right;
 }
 
-.form input[type=text], .form textarea {
+.form .input {
   padding: 8px 15px;
   border: none;
   background: #222222;
@@ -101,12 +111,14 @@ body {
 .section-detail {
   font-size: 1.1em;
   background: #F8F8F8 url(pattern.jpg);
+  text-align: center; /* IE6 */
 }
 
-.section-detail > .inner {
+.inner-detail {
   width: 80%;
   margin: 0 auto;
   padding-top: 30px;
+  text-align: left; /* IE6 */
 }
 
 .section-detail h1 span {
@@ -118,18 +130,23 @@ body {
   list-style: none;
   margin: 0;
   padding: 0;
+  overflow: hidden;
+  zoom: 100%;
 }
 
 .schools ul li {
   float: left;
   width: 25%;
+  height: 30px;
+  line-height: 30px;
+  overflow: hidden;
 }
 
 .schools ul li a {
   display: block;
   background: #ECECEC;
-  padding: 3px 10px;
-  margin: 2px 3px;
+  padding: 0px 10px;
+  margin: 3px;
   text-decoration: none;
   color #555555;
 }
@@ -137,3 +154,14 @@ body {
 .schools ul li a:visited {color: #555555; }
 .schools ul li a:hover { color: #555555; background: #e2e2e2; }
 .schools ul li a:active { color: #555555; }
+
+.footer {
+  font-size: .8em;
+  margin-top: 30px;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.footer a, footer span {
+    margin: 0 10px;
+}
