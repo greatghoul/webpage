@@ -28,9 +28,9 @@ a:hover, a:active {
 
 .container { min-width: 940px; }
 
-
 .section-form {
   width: 80%;
+  min-width: 940px; 
   margin-top: 80px;
   margin: 80px auto 0 auto;
   padding: 20px 50px;
@@ -39,8 +39,13 @@ a:hover, a:active {
   font-size: 1.2em;
 }
 
+.section-form h1 {
+  margin-top: 0;
+}
+
 .intro {
-  margin-right: 500px;
+  float: left;
+  width: 60%;
 }
 
 .intro img {
@@ -53,12 +58,9 @@ a:hover, a:active {
 }
 
 .form {
-  width: 450px;
-  float: right;
-}
-
-.form h1 {
-  margin-top: 0;
+  width: 40%;
+  float: left;
+  min-width: 375px;
 }
 
 .form .inner {
@@ -72,20 +74,27 @@ a:hover, a:active {
 }
 
 .form label .name {
-  display: inline-block; /* FIXME: IE6 */
-  width: 100px;
-  padding-right: 5px;
-  padding-top: 7px;
+  width: 30%;
+  float: left;
+  min-width: 100px;
   vertical-align: top;
-  text-align: right;
+}
+
+.form label .controls {
+  float: left;
+  width: 70%;
 }
 
 .form .input {
-  padding: 8px 15px;
+  display: block;
+  width: 90%;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 5px 5%;;
   border: none;
   background: #222222;
   color: #aaaaaa;
-  width: 250px;
 }
 
 .form .required {
@@ -93,17 +102,22 @@ a:hover, a:active {
 }
 
 .form-actions {
-  padding-left: 100px;
+  margin-top: 10px;
+  margin-left: 30%;
 }
 
 #btn-submit {
-  padding: 5px 20px;
+  display: inline-block;
   font-size: 1.2em;
+  padding: 5px 20px;
   line-height: 1.2em;
   background: #F8E901;
   text-decoration: none;
   color: #222;
 }
+
+*html #btn-submit { margin-left: -12px; }
+*+html #btn-submit { margin-left: -12px; }
 
 #btn-submit:hover {
   background: #222;
@@ -174,12 +188,11 @@ a:hover, a:active {
 /* 平板电脑和小屏电脑之间的分辨率 */
 @media (max-width: 768px) {
     .container { min-width: 0; }
-    .section-form { padding: 5px 10px; margin-top: 20px; }
-    .intro { margin-right: 0; }
+    .section-form { padding: 10px; margin-top: 20px; min-width: 0; }
+    .intro { margin-right: 0; float: none; width: auto; margin-bottom: 20px; }
     .form { float: none; width: auto; }
     .form label { margin-bottom: 5px; }
     .form label .name { text-align: left; display: block; margin-bottom: 3px; }
-    .form .input { display: block; width: 100%; min-height: 30px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
     .form-actions { padding-left: 0; text-align: center; margin-top: 10px; }
     #btn-submit { display: block; }
     .schools ul li { width: 49.8%; }
@@ -192,4 +205,8 @@ a:hover, a:active {
 }
  
 /* 横向放置的手机及分辨率更小的设备 */
-@media (max-width: 480px) {}
+@media (max-width: 480px) {
+  .form { min-width: 0; }
+  .form label .name { width: auto; float: none; } 
+  .form label .controls { width: auto; float: none; } 
+}
