@@ -68,21 +68,32 @@ a:hover, a:active {
   padding: 20px;
 }
 
-.form label {
+.control-group {
   display: block;
   margin-bottom: 20px;
 }
 
-.form label .name {
+.control-group .name {
   width: 30%;
   float: left;
   min-width: 100px;
   vertical-align: top;
 }
 
-.form label .controls {
+.control-group .controls {
   float: left;
   width: 70%;
+}
+
+.control-group .error {
+  display: none;
+  margin-top: 3px;
+  font-size: 0.7em;
+  color: red;
+}
+
+.control-group.error .error {
+  display: block;
 }
 
 .form .input {
@@ -191,8 +202,8 @@ a:hover, a:active {
     .section-form { padding: 10px; margin-top: 20px; min-width: 0; }
     .intro { margin-right: 0; float: none; width: auto; margin-bottom: 20px; }
     .form { float: none; width: auto; }
-    .form label { margin-bottom: 5px; }
-    .form label .name { text-align: left; display: block; margin-bottom: 3px; }
+    .control-group { margin-bottom: 5px; }
+    .control-group .name { text-align: left; display: block; margin-bottom: 3px; }
     .form-actions { margin-left: 0; text-align: center; margin-top: 10px; }
     #btn-submit { display: block; }
     .schools ul li { width: 49.8%; }
@@ -207,6 +218,6 @@ a:hover, a:active {
 /* 横向放置的手机及分辨率更小的设备 */
 @media (max-width: 480px) {
   .form { min-width: 0; }
-  .form label .name { width: auto; float: none; } 
-  .form label .controls { width: auto; float: none; } 
+  .control-group .name { width: auto; float: none; } 
+  .control-group .controls { width: auto; float: none; } 
 }
