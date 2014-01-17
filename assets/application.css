@@ -193,7 +193,7 @@ a:hover, a:active {
     .form { float: none; width: auto; }
     .form label { margin-bottom: 5px; }
     .form label .name { text-align: left; display: block; margin-bottom: 3px; }
-    .form-actions { padding-left: 0; text-align: center; margin-top: 10px; }
+    .form-actions { margin-left: 0; text-align: center; margin-top: 10px; }
     #btn-submit { display: block; }
     .schools ul li { width: 49.8%; }
     .footer span { display: block; }
