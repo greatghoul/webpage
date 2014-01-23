@@ -26,7 +26,9 @@ a:hover, a:active {
   clear: both;
 }
 
-.container { min-width: 940px; }
+.container {
+  min-width: 940px;
+}
 
 .section-form {
   width: 80%;
@@ -105,7 +107,7 @@ a:hover, a:active {
 
 .form .input {
   display: block;
-  width: 90%;
+  width: 100%;
   -webkit-box-sizing: border-box;
      -moz-box-sizing: border-box;
           box-sizing: border-box;
@@ -114,6 +116,9 @@ a:hover, a:active {
   background: #222222;
   color: #aaaaaa;
 }
+
+*html .form .input { width: 90%; } /* IE6 */
+*+html .form .input { width: 90%; } /* IE7 */
 
 .form .required {
   color: #AC4A4A;
@@ -134,8 +139,8 @@ a:hover, a:active {
   color: #222;
 }
 
-*html #btn-submit { margin-left: -12px; }
-*+html #btn-submit { margin-left: -12px; }
+*html #btn-submit { margin-left: -12px; } /* IE6 */
+*+html #btn-submit { margin-left: -12px; } /* IE7 */
 
 #btn-submit:hover {
   background: #222;
