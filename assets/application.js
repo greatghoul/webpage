@@ -7,18 +7,18 @@ function trim(text) {
 }
 
 function validates() {
-    var name  = trim(document.getElementById('name').value),
-        email = trim(document.getElementById('email').value), 
+    var clientname  = trim(document.getElementById('clientname').value),
+        clientemail = trim(document.getElementById('clientemail').value), 
         errors = [];
 
-    if (name.length === 0) {
-        errors.push({ field: 'name', message: '请填写姓名'});
+    if (clientname.length === 0) {
+        errors.push({ field: 'clientname', message: '请填写姓名'});
     }
     
-    if (email.length === 0) {
-        errors.push({ field: 'email', message: '请填写邮箱' })
-    } else if (!PAT_EMAIL.test(email)) {
-        errors.push({ field: 'email', message: '邮箱格式不正确' })
+    if (clientemail.length === 0) {
+        errors.push({ field: 'clientemail', message: '请填写邮箱' })
+    } else if (!PAT_EMAIL.test(clientemail)) {
+        errors.push({ field: 'clientemail', message: '邮箱格式不正确' })
     }
 
     return errors;
@@ -30,8 +30,8 @@ function setClassName(id, className) {
 
 function showErrors(errors) {
     // 重置错误信息
-    setClassName('control-group-name', 'control-group');
-    setClassName('control-group-email', 'control-group');
+    setClassName('control-group-clientname', 'control-group');
+    setClassName('control-group-clientemail', 'control-group');
 
     for (var i = 0; i < errors.length; i++) {
         var error = errors[i];
@@ -43,7 +43,7 @@ function showErrors(errors) {
 submit.onclick = function() {
     var errors = validates(); 
     showErrors(errors);
-    if (errors) {
+    if (errors.length) {
         return false;
     } else {
         form.submit();
